@@ -26,6 +26,6 @@ public class SearchAssertion extends MainPage {
 
     public void isResultsVisible() {
         wait.until(ExpectedConditions.visibilityOf(resultsReady));
-        Assert.assertTrue(driver.findElement(By.cssSelector("div[class='v7W49e']")).isDisplayed());
+        Assert.assertTrue(searchResults.isDisplayed());
     }
 }
