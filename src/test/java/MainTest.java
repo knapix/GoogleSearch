@@ -1,3 +1,4 @@
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -16,16 +17,12 @@ public class MainTest {
     @BeforeTest
     @Parameters({"url"})
     public void before(String url) {
+        WebDriverManager.chromedriver().setup();
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--start-maximized");
-
-        System.setProperty("webdriver.chrome.driver", "src\\test\\resources\\chromedriver.exe");
-
-        //prefs.put("profile.default_content_setting_values.automatic_downloads", 1);
         driver = new ChromeDriver(options);
         wait = new WebDriverWait(driver, 30);
         indexPage = new IndexPage(driver, wait, url);
-
 
     }
 
