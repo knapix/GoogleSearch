@@ -13,7 +13,7 @@ public class IndexPage extends MainPage {
     private WebElement searchButton;
 
     @FindBy(css = "input[type=text]")
-    private WebElement nameInput;
+    private WebElement searchText;
 
     @FindBy(css = "button[id='L2AGLb']")
     private WebElement agreeButton;
@@ -35,8 +35,8 @@ public class IndexPage extends MainPage {
     }
 
     public IndexPage setString(String name) {
-        wait.until(ExpectedConditions.visibilityOfAllElements(nameInput));
-        nameInput.sendKeys(name);
+        wait.until(ExpectedConditions.visibilityOfAllElements(searchText));
+        searchText.sendKeys(name);
         return this;
     }
 

@@ -13,7 +13,6 @@ public class SearchResultsPage extends MainPage {
         super(driver, wait);
         searchAssertion = new SearchAssertion(driver, wait);
         PageFactory.initElements(driver, this);
-
     }
 
     public SearchAssertion searchAssertion;

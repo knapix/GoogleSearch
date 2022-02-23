@@ -5,7 +5,7 @@
 
     <test name="Search">
         <classes>
-            <class name="SearchTest"></class>
+            <class name="SearchTest"/>
         </classes>
     </test>
 
